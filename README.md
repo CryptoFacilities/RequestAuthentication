@@ -7,6 +7,7 @@ NodeJs
 ------
 
 ```
+const API_SECRET = "..."
 var nonce = 1;
 
 // Generate nonce
@@ -29,7 +30,7 @@ function signMessage(endpoint, nonce, postData) {
 	var hash = crypto.createHash('sha256').update(utf8.encode(message)).digest();
 
 	// step 3: base64 decode apiPrivateKey
-	var secretDecoded = Buffer.from("aBLTMBs2+GK6ttSHvMhzVMHpIZDTFpOCFpHlMc8Wiiw4jU6Sc5YqMGYxw080o/RVnzDdh6jSc08Y3M9VXCPzbEhJ",'base64');
+	var secretDecoded = Buffer.from(API_SECRET,'base64');
 
 	// step 4: use result of step 3 to hash the resultof step 2 with
 	var hash2 = crypto.createHmac('sha512',secretDecoded).update(hash).digest();
