@@ -17,7 +17,7 @@ function createNonce() {
 	return n;
 }
 
-// Signs a message
+// Sign request
 function signMessage(endpoint, nonce, postData) {
 	const utf8 = require("utf8");
 	const crypto = require('crypto');
