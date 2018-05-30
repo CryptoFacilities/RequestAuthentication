@@ -1,11 +1,10 @@
-Crypto Facilities REST API v3
-==================================
+Crypto Facilities Request Authentication
+========================================
 This is a help readme for [Crypto Facilities Ltd](https://www.cryptofacilities.com/), to demonstrate
 the message signing in  REST v3 API and WS v1 API requests and subscriptions.
 
 NodeJs
 ------
-
 ```
 const API_SECRET = "..."
 var nonce = 1;
